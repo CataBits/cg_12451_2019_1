@@ -1,0 +1,123 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+/* Background da página */
+body {
+    background: url('/img/fundo01.jpg') black fixed;
+}
+
+.wrap {
+    background: rgba(255,255,255,.9);
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+/* Cabeçalho */
+.header {
+    background: #ff6600;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header img {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin-right: 1rem;
+}
+.header h1 {
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;
+}
+.header small {
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: .25rem;
+    text-shadow: none;
+}
+
+/* Menu principal */
+.nav {
+    background: black;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav a {
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+.nav a:hover {
+    background: orangered;
+    text-decoration: none;
+}
+.nav a:first-child {
+    margin-right: auto;
+}
+.nav a:first-child, .nav a:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rodapé */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #444;
+    color: white;
+    text-align: center;
+}
+.footer > div {
+    font-size: .8rem;
+}
+.footer > div > div {
+    font-size: .75rem;
+    margin-top: .4rem;
+}
+.footer > div > div a {
+    padding: 0;
+}
+
+.footer a {
+    padding: 1rem;
+    color: white;
+}
+.footer a:hover {
+    background: orangered;
+    text-decoration: none;
+}
+
+/* Conteúdo central */
+.main {
+    padding: 0 1.5rem;
+}
+
+/* Classe úteis */
+.responsivo {
+    width: auto;
+    max-width: 100%;
+}
