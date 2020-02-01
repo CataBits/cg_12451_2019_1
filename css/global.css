@@ -22,7 +22,7 @@ a:hover {
 
 /* Background da página */
 body {
-    background: url('/img/fundo01.jpg') black fixed;
+    background: url('/img/fundo02.jpg') black fixed;
 }
 
 .wrap {
@@ -48,7 +48,8 @@ body {
 .header h1 {
     margin: 0;
     text-align: center;
-    text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;
+    -webkit-text-stroke: 1px #000;
+    /* text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000; */
 }
 .header small {
     display: block;
@@ -56,9 +57,10 @@ body {
     font-weight: normal;
     letter-spacing: .25rem;
     text-shadow: none;
+    -webkit-text-stroke: 0;
 }
 
-/* Menu principal */
+/* Menu principal 
 .nav {
     background: black;
     display: flex;
@@ -81,6 +83,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+*/
 
 /* Rodapé */
 .footer {
@@ -120,4 +123,61 @@ body {
 .responsivo {
     width: auto;
     max-width: 100%;
+}
+
+/* Stick footer - Rodapé embaixo quando sem barra de rolagem */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.main {
+    flex-grow: 1;
+}
+
+/* Menu principal responsivo */
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.nav a {
+    display: block;
+    padding: .8rem;
+    color: #fff;
+}
+.nav a:hover, .active {
+    background: orangered;
+    text-decoration: none;
+}
+.nav > a:first-child {
+    margin-right: auto;
+}
+#menulinks {
+    display: none;
+    background: #333;
+    position: absolute;
+    top: 2.77rem;
+    left: 0;
+    box-shadow: 5px 5px 5px #888;
+    min-width: 70%;
+}
+
+@media (min-width: 575px) {
+    #menulinks {
+        display: inline-block;
+        background: inherit;
+        position: relative;
+        top: auto;
+        left: auto;
+        box-shadow: none;
+        min-width: auto;
+    }
+    .nav a {
+        display: inline-block;
+    }
+    .nav > a:last-child, .nav > div span {
+        display: none;
+    }
 }

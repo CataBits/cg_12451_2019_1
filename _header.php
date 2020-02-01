@@ -20,10 +20,14 @@
     </header>
 
     <nav class="nav">
-        <a href="index.php" title="Vai para a home page"><i class="fas fa-fw fa-home"></i></a>
-        <a href="artigos.php"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
-        <a href="sobre.php"><i class="fas fa-fw fa-info-circle"></i> Sobre</a>
-        <a href="procurar.php"><i class="fas fa-search"></i></a>
+        <a href="/" title="Página inicial"><i class="fas fa-fw fa-home"></i></a>
+        <div id="menulinks">
+            <a href="/artigos.php"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
+            <a href="/contatos.php"><i class="fas fa-fw fa-mail-bulk"></i> Contatos</a>
+            <a href="/sobre.php"><i class="fas fa-fw fa-info-circle"></i> Sobre</a>
+            <a href="/procurar.php" title="Procurar"><i class="fas fa-fw fa-search"></i><span>&nbsp;Procurar</span></a>
+        </div>
+        <a href="#menu" id="menu" title="Mostra / Oculta menu"><i class="fas fa-fw fa-bars"></i></a>
     </nav>
     
     <main class="main">
