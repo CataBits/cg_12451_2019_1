@@ -1,9 +1,18 @@
 <?php
 
+// Título "desta" página. Se = "", usa o título e o slogan do site.
+$titulo = "Página Modelo";
+
+// Carrega o CSS adicional "desta" página. Se "", não carrega CSS adicional.
+$css = "/css/template.css";
+
+// Carrega o JavaScript adicional "desta" página. Se "", não usa JavaScript adicional.
+$js = "/js/template.js";
+
 // Template de abertura - cabeçalho
 require ('_header.php');
 
-?>
+?> 
 
 <h2>Proin vestibulum blandit</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis sapien vel ultrices molestie. Phasellus ut tellus feugiat, tincidunt orci in, lobortis urna. Morbi eu efficitur lectus. Nullam eleifend tellus quis consequat hendrerit. Vivamus nec hendrerit nibh. Nam auctor viverra lacus ut lobortis. In odio eros, semper a tellus eget, facilisis faucibus nulla.</p>

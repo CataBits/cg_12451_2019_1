@@ -1,24 +1,49 @@
-<!DOCTYPE html>
+<?php
+
+// Tratando o título --> $titulo
+if ( $titulo == "" ) {
+    $titulo = "Gatolândia .::. Sem arranhões";
+} else {
+    $titulo = "{$titulo} .::. Gatolândia";
+}
+
+// Tratando o CSS adicional --> $css
+if ( $css == "" ) {
+    $css = null;
+} else {
+    // Escapeando as aspas da string usando "\"
+    $css = "\t<link rel=\"stylesheet\" href=\"{$css}\">\n";
+}
+
+// Tratando o JavaScript adicional --> $js
+if ( $js == "" ) {
+    $js = null;
+} else {
+    $js = "<script src=\"{$js}\"></script>\n";
+}
+
+?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/logo01.jpg">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <title>Gatolândia - Sem arranhões</title>
+    <link rel="shortcut icon" href="/img/logo01.jpg">
+    <link rel="stylesheet" href="/css/global.css">
+<?php echo $css ?>
+    <link rel="stylesheet" href="/css/all.min.css">
+    <title><?php echo $titulo ?></title>
 </head>
-<body>
+<body> 
 <a id="topo"></a>
 
 <div class="wrap">
 
     <header class="header">
-        <a href="index.php"><img src="img/logo01.jpg" alt="Gatolândia" title="Home Page do Gatolândia"></a>
+        <a href="index.php"><img src="/img/logo01.jpg" alt="Gatolândia" title="Home Page do Gatolândia"></a>
         <h1>Gatolândia<small>Sem arranhões</small></h1>
     </header>
-
+ 
     <nav class="nav">
         <a href="/" title="Página inicial"><i class="fas fa-fw fa-home"></i></a>
         <div id="menulinks">
