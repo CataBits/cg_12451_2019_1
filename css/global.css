@@ -1,3 +1,12 @@
+/* Pré-configuração do CSS do site */
+:root {
+    --tamanho-texto-site: 16px;
+    --tipo-fonte-site: sans-serif;
+    --cor-dos-links: steelblue;
+    --cor-dos-links-em-hover: orangered;
+    --fundo-da-pagina: url('/img/fundo02.jpg') black fixed;
+}
+
 /* Reset */
 * {
     box-sizing: border-box;
@@ -8,23 +17,27 @@ html, body {
     width: 100%;
     height: 100%;
     position: relative;
-    font-size: 16px;
-    font-family: sans-serif;
+    font-size: var(--tamanho-texto-site);
+    font-family: var(--tipo-fonte-site);
 }
 a {
-    color: steelblue;
+    color: var(--cor-dos-links);
     text-decoration: none;
 }
 a:hover {
-    color: orangered;
+    color: var(--cor-dos-links-em-hover);
     text-decoration: underline;
+}
+p, h1, h2, h3, h4, h5 {
+    margin: 1rem 0;
 }
 
 /* Background da página */
 body {
-    background: url('/img/fundo02.jpg') black fixed;
+    background: var(--fundo-da-pagina);
 }
 
+/* Página semi-fluída */
 .wrap {
     background: rgba(255,255,255,.9);
     width: 100%;
@@ -49,7 +62,6 @@ body {
     margin: 0;
     text-align: center;
     -webkit-text-stroke: 1px #000;
-    /* text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000; */
 }
 .header small {
     display: block;
@@ -60,31 +72,6 @@ body {
     -webkit-text-stroke: 0;
 }
 
-/* Menu principal 
-.nav {
-    background: black;
-    display: flex;
-    justify-content: flex-end;
-}
-.nav a {
-    padding: 1rem;
-    color: white;
-    text-align: center;
-}
-.nav a:hover {
-    background: orangered;
-    text-decoration: none;
-}
-.nav a:first-child {
-    margin-right: auto;
-}
-.nav a:first-child, .nav a:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
 /* Rodapé */
 .footer {
     display: flex;
@@ -93,6 +80,14 @@ body {
     background: #444;
     color: white;
     text-align: center;
+}
+.footer a {
+    padding: 1rem;
+    color: white;
+}
+.footer a:hover {
+    background: orangered;
+    text-decoration: none;
 }
 .footer > div {
     font-size: .8rem;
@@ -105,15 +100,6 @@ body {
     padding: 0;
 }
 
-.footer a {
-    padding: 1rem;
-    color: white;
-}
-.footer a:hover {
-    background: orangered;
-    text-decoration: none;
-}
-
 /* Conteúdo central */
 .main {
     padding: 0 1.5rem;
@@ -123,16 +109,6 @@ body {
 .responsivo {
     width: auto;
     max-width: 100%;
-}
-
-/* Stick footer - Rodapé embaixo quando sem barra de rolagem */
-.wrap {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-.main {
-    flex-grow: 1;
 }
 
 /* Menu principal responsivo */
@@ -180,4 +156,14 @@ body {
     .nav > a:last-child, .nav > div span {
         display: none;
     }
+}
+
+/* Stick footer - Rodapé fica embaixo quando sem barra de rolagem */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.main {
+    flex-grow: 1;
 }

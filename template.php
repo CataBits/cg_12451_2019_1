@@ -1,13 +1,32 @@
 <?php
 
-// Título "desta" página. Se = "", usa o título e o slogan do site.
-$titulo = "Página Modelo";
+/*
+    $titulo --> Define o título "desta" página.
+    Se = "", usa o título e o slogan do site.
+*/
+$titulo = "";
 
-// Carrega o CSS adicional "desta" página. Se "", não carrega CSS adicional.
-$css = "/css/template.css";
+/*
+    $css --> Carrega o CSS adicional "desta" página.
+    Se "", não carrega CSS adicional.
+    Exemplo: /css/template.css
+*/
+$css = "";
 
-// Carrega o JavaScript adicional "desta" página. Se "", não usa JavaScript adicional.
-$js = "/js/template.js";
+/*
+    $js --> Carrega o JavaScript adicional "desta" página.
+    Se "", não usa JavaScript adicional.
+    Exemplo: /js/template.js
+*/
+$js = "";
+
+/*
+    $menu --> Define o item ativo do menu "nesta" página.
+    Se "", nenhum item será marcado.
+    Valores possíveis: "", "artigos", "contatos", "sobre", "procurar", "noticias".
+    Qualquer outro valor = "".
+*/
+$menu = "noticias";
 
 // Template de abertura - cabeçalho
 require ('_header.php');
